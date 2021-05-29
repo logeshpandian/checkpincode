@@ -14,12 +14,15 @@ while True:
 
     somanur_url = url + "pincode=" + str(somanur_pin) + "&date=" + str(date)
     singanallur_url = url + "pincode=" + str(singanalur_pin) + "&date=" + str(date)
-
+    
     somanur = requests.get(somanur_url)
     somanur_data = somanur.json()
     singanallur = requests.get(singanallur_url)
     singanallur_data = singanallur.json()
-
+    
+    print(somanur)
+    print("*************")
+    print(somanur_data
     for i in somanur_data['sessions']:
         total_avl = i['available_capacity']
         dose1_avl = i['available_capacity_dose1']

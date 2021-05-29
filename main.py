@@ -14,10 +14,14 @@ while True:
 
     somanur_url = url + "pincode=" + str(somanur_pin) + "&date=" + str(date)
     singanallur_url = url + "pincode=" + str(singanalur_pin) + "&date=" + str(date)
+    
+    headers = {
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+        }
 
-    somanur = requests.get(somanur_url)
+    somanur = requests.get(somanur_url,headers=headers)
     somanur_data = somanur.json()
-    singanallur = requests.get(singanallur_url)
+    singanallur = requests.get(singanallur_url,headers=headers)
     singanallur_data = singanallur.json()
 
     print(somanur)

@@ -20,6 +20,11 @@ while True:
     singanallur = requests.get(singanallur_url)
     singanallur_data = singanallur.json()
 
+    print(somanur)
+    print("*************")
+    print(somanur_data)
+    print(today)
+
     for i in somanur_data['sessions']:
         total_avl = i['available_capacity']
         dose1_avl = i['available_capacity_dose1']
